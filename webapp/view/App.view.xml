@@ -1,0 +1,8 @@
+<mvc:View
+	controllerName="vcp.Customers.controller.App"
+	xmlns="sap.m"
+	xmlns:mvc="sap.ui.core.mvc">
+	<!--Text text="Hola Mundo"></Text-->
+	<Button text="{i18n>textoBoton}" press=".onShowHello"></Button>
+	<Input value="{/raiz/name}" description="Hello {/raiz/name}" valueLiveUpdate="true" width="60%"></Input>
+</mvc:View>
