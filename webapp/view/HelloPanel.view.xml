@@ -1,0 +1,8 @@
+<mvc:View xmlns="sap.m" xmlns:mvc="sap.ui.core.mvc" controllerName="vcp.Customers.controller.HelloPanel">
+	<Panel headerText="{i18n>tituloPanel}" expandable="true" class="sapUiResponsiveMargin" width="auto">
+		<Button text="{i18n>abrirDialogo}" press=".onOpenDialog" class="sapUiSmallMarginEnd" icon="sap-icon://action"></Button>
+		<Button text="{i18n>textoBoton}" press=".onShowHello" class="sapUiSmallMarginEnd"></Button>
+		<Input value="{/raiz/name}" valueLiveUpdate="true" width="60%"></Input>
+		<Text text="Hello {/raiz/name}" class="sapUiSmallMargin boldElements"></Text>
+	</Panel>
+</mvc:View>

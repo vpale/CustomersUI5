@@ -35,6 +35,10 @@ sap.ui.define([
 			var sHola = this.getView().getModel("i18n").getResourceBundle().getText("mensajeHola");
 			var sInput = this.getView().getModel().getProperty("/raiz/name");
 			MessageToast.show(sHola.concat(" ").concat(sInput));
+		},
+		
+		onOpenDialogo: function () {
+			this.getOwnerComponent().openDialogo();
 		}
 	});
 });

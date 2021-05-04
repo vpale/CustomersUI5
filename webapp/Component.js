@@ -1,8 +1,9 @@
 sap.ui.define([
 	"sap/ui/core/UIComponent",
 	"vcp/Customers/model/models",
-	"sap/ui/model/resource/ResourceModel"
-], function (UIComponent, models, ResourceModel) {
+	"sap/ui/model/resource/ResourceModel",
+	"./controller/Dialogo"
+], function (UIComponent, models, ResourceModel, Dialogo) {
 	
 	//return UIComponent.extend("vcp.Customers.Component.js", {
 	return UIComponent.extend("vcp.Customers.Component", {
@@ -26,6 +27,17 @@ sap.ui.define([
 				bundleName: "vcp.Customers.i18n.i18n"
 			});
 			this.setModel(i18nModel,"i18n");
+			
+			this._oDialogo = new Dialogo(this.getRootControl());
+		},
+		
+		exit: function () {
+			this._oDialogo.destroy();
+			delete this._oDialogo;
+		},
+		
+		openDialogo: function () {
+			this._oDialogo.open();
 		}
 	});
 });
